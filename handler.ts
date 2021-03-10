@@ -1,4 +1,6 @@
-const handler = (event: any, context: any) => {
+import { BatchOrderEvent } from './lib/types'
+
+const handler = (event: BatchOrderEvent, context: any) => {
   return event.body
 }
 
