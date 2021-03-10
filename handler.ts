@@ -1,4 +1,4 @@
-const handler = (event, context) => {
+const handler = (event: any, context: any) => {
   return event.body
 }
 
