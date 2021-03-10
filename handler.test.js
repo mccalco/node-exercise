@@ -1,5 +1,5 @@
 const fs = require('fs')
-const handler = require('./handler')
+const handler = require('./dist/handler')
 
 const event = {
   body: fs.readFileSync('./fixtures/shipments.json', 'utf8')
