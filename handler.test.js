@@ -10,16 +10,6 @@ const context = {
 }
 
 describe('Handler', () => {
-  it('Parses the event data into JSON', () => {
-    const data = handler(event, context)
-
-    const { ORDERS: orders } = data
-    expect(orders.length).toEqual(3)
-
-    const [order] = orders
-    expect(order.O_ID).toEqual('12345')
-  })
-
   it('Unexpected input throws', () => {
     expect(() => {
       const invalidEvent = {
