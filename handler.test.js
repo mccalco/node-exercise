@@ -19,4 +19,13 @@ describe('Handler', () => {
     const [order] = orders
     expect(order.O_ID).toEqual('12345')
   })
+
+  it('Unexpected input throws', () => {
+    expect(() => {
+      const invalidEvent = {
+        body: "{]"
+      }
+      handler(invalidEvent, context)
+    }).toThrow('Bad Request - Unable to process batch.');
+  })
 })
