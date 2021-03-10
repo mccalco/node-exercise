@@ -1,7 +1,8 @@
-import { BatchOrderEvent } from './lib/types'
+import { BatchOrderEvent, OrderBatched } from './lib/types'
 
 const handler = (event: BatchOrderEvent, context: any) => {
-  return JSON.parse(event.body)
+  const batch = JSON.parse(event.body) as OrderBatched;
+  return batch;
 }
 
 module.exports = handler
